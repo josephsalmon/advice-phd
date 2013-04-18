@@ -1,0 +1,9 @@
+*.pdf
+*.aux
+*.log
+*.backup
+*.gz
+*.bbl
+*.blg
+*.nlo
+*~
