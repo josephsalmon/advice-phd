@@ -259,10 +259,12 @@ Si l'on ne veut pas numéroter une équation,  on met une étoile à la fin de l
 
 
 
-Pour un grand panel de symboles mathématiques, il suffit de regarder les raccourcis fournis par l'éditeur que vous utilisez ou de chercher sur Internet un lexique. Voici néanmoins quelques commandes : pour aller à la ligne  $\backslash\backslash$ , 
+Pour un grand panel de symboles mathématiques, il suffit de regarder les raccourcis fournis par l'éditeur 
+que vous utilisez ou de chercher sur Internet un lexique. Voici néanmoins quelques commandes : 
+pour aller à la ligne  \lstinline+\\+, 
 pour une nouvelle feuille \lstinline+\newpage+, pour les trois points  \lstinline+\ldots+\medskip
 \\
-On renvoit à \href{http://www.ctan.org/get/info/symbols/comprehensive/symbols-a4.pdf}{``The Comprehensive Latex Symbol List''} par Scott Pakin pour une liste exhaustive de tous les symboles connus.
+On renvoit à \href{http://www.tex.ac.uk/tex-archive/info/symbols/comprehensive/symbols-a4.pdf}{``The Comprehensive Latex Symbol List''} par Scott Pakin pour une liste exhaustive de tous les symboles connus.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -437,13 +439,12 @@ l'extension des fichiers ``\textbf{bibtex}''. On le met également dans le dossi
   booktitle = {COLT}, 
   year      = {2003}, 
   pages     = {303-313}, 
-  bibsource = {DBLP, http://dblp.uni-trier.de}, 
 }
 \end{lstlisting}
 
 On doit alors compiler la bibliographie avec la commande bibtex. Il faut aller dans l'onglet ``\textbf{build}'' ou ``\textbf{construire}'', puis cliquer sur ``\textbf{compile}''. Le type de compilation est alors Bibtex.\medskip
 
-La citation apparaît à l'endroit voulu grâce à la commande  \lstinline+\ref{nom citation}+. 
+La citation apparaît à l'endroit voulu grâce à la commande  \lstinline+\ref{nom_citation}+. 
 Tout à la fin du fichier .pdf, on trouve alors  les références voulues avec tous les détails que l'on a précisés 
 sur le document cité. 
 Pour cela il faut  écrire juste avant \lstinline+\end{document}+ les commandes 
