@@ -1,0 +1,297 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% 	French, accents and font coding     	      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[english, francais]{babel}
+\usepackage[french]{varioref}		% for some references
+\usepackage{enumitem} 			% for enumeration special items
+\usepackage[grey,utopia]{quotchap}
+\usepackage[french]{minitoc}
+\setcounter{minitocdepth}{1}
+\usepackage{xcolor}
+
+
+\usepackage{fancyhdr}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+% \usepackage[latin1]{inputenc}
+
+% \usepackage{mathptmx}
+\usepackage[authoryear]{natbib}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts}
+\usepackage{amsthm}			% for theorem definitions
+\usepackage{amsopn}			% ????
+\usepackage{dsfont}			% for  \mathds for 0/1 functions
+\usepackage{graphicx}			% for images and graphics
+\usepackage{stmaryrd}			% for \llbracket symbols [[ ]]
+\usepackage{color}
+\usepackage{subeqnarray}
+\usepackage{subfigure}
+\usepackage{a4wide,examplep}
+\usepackage{kmath,kerkis} % The order of the packages matters; kmath changes the default text font
+\usepackage{setspace}			% \setstretch{1}
+\usepackage{subfigure}
+
+
+
+
+% \usepackage[T1]{fontenc}
+
+
+
+
+
+
+\graphicspath{{images/}}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  		Couleurs			      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{test}{rgb}{0.64,0.16,0.16}
+\definecolor{vsomb_col}{rgb}{0.00,0.57,0.1}
+\definecolor{fb_col}{rgb}{0.25,0.41,0.88}
+\definecolor{macouleur}{cmyk}{0.2,0.45,0.9,0}%{0.05,0.22,0.89,0}
+\definecolor{rltred}{rgb}{0.75,0,0}
+\definecolor{oneblue}{rgb}{0,0,0.75}
+\definecolor{marron}{rgb}{0.64,0.16,0.16}
+\definecolor{forestgreen}{rgb}{0.13,0.54,0.13}
+\definecolor{verte}{rgb}{0.13,0.74,0.23}
+\definecolor{marronchocolat}{cmyk}{0.15,0.32,0.59,0.19}
+\definecolor{parme}{cmyk}{0.05,0.22,0.19,0.5}
+\definecolor{rltgreen}{rgb}{0.5,0.01,0.9}%violet
+\definecolor{oneblue}{rgb}{0,0,0.75}
+\definecolor{purple}{rgb}{0.5,0.5,0.98}
+\definecolor{purpleone}{rgb}{0.9,0.5,0.5}
+\definecolor{dockerblue}{rgb}{0.11,0.56,0.98}
+\definecolor{myblue}{rgb}{0,0.2,0.4}%bien
+\definecolor{LightBack}{rgb}{0,0.2,0.4}%{0.2, 0.2,0.4}
+\definecolor{freeblue}{rgb}{0.25,0.41,0.88}
+% \definecolor{lightgreen}{rgb}{.2,1,.2}
+% \definecolor{lightblue}{rgb}{.2,.2,1}
+% \definecolor{vermillon}{RGB}{213,94,0}
+\definecolor{orange_js}{RGB}{230,159,0}
+\definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+\definecolor{marron}{rgb}{0.64,0.16,0.16}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% 	        Algorithmes		              %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{fancyvrb}			% for fancy verbatim
+\usepackage{textcomp}
+\usepackage[procnames]{listings}		% need the procnames for more options
+
+\lstdefinestyle{latexsty}{ language = [LaTeX]{TeX},%
+ upquote,%
+ literate   = {"}{\textquotedbl}1,%
+ basicstyle = \ttfamily,%
+ columns    = flexible,%
+keywordstyle=\color{red},
+firstnumber=100,
+commentstyle=\color{orange_js}, %vsomb_col white comments
+%% style for number
+numbers=none,
+resetmargins=true,
+xleftmargin=10pt,
+linewidth= \linewidth, 
+numberstyle=\tiny, 
+stepnumber=1, 
+numbersep=8pt, %
+frame=shadowbox,
+rulesepcolor=\color{black},
+}
+
+
+
+
+% \lstdefinestyle{rsty}{
+%  language   = {R},%
+%  upquote,%
+%  literate   = {"}{\textquotedbl}1,%
+%  basicstyle = \ttfamily,%
+%  columns    = flexible,%
+% keywordstyle=\color{red},
+% firstnumber=100,
+% commentstyle=\color{orange_js}, %vsomb_col white comments
+% %% style for number
+% numbers=none,
+% resetmargins=true,
+% xleftmargin=10pt,
+% linewidth= \linewidth, 
+% numberstyle=\tiny, 
+% stepnumber=1, 
+% numbersep=8pt, %
+% frame=shadowbox,
+% rulesepcolor=\color{black}
+% }
+
+\lstdefinestyle{pythonsty}{ language = {python},%
+basicstyle = \ttfamily\setstretch{1},%
+columns    = flexible,%
+keywordstyle=\color{javared},
+firstnumber=100,
+frame=shadowbox,
+showstringspaces=false,
+morekeywords={import,from,class,def,for,while,if,is,in,elif,
+else,not,and,or,print,break,continue,return,True,False,None,access,
+as,del,except,exec,finally,global,import,lambda,pass,print,raise,try,assert},
+keywordstyle={\color{javared}\bfseries},
+commentstyle=\color{javagreen}, %vsomb_col white comments
+morecomment=[s][\color{javagreen}]{"""}{"""},
+upquote=true, 
+%% style for number
+numbers=none,
+resetmargins=true,
+xleftmargin=10pt,
+linewidth= \linewidth, 
+numberstyle=\tiny, 
+stepnumber=1, 
+numbersep=8pt, %
+frame=shadowbox,
+rulesepcolor=\color{black},
+procnamekeys={def,class},
+procnamestyle=\color{oneblue}\textbf,
+}
+
+% 
+
+
+
+% \lstdefinestyle{csty}{language=C++,style=numbers,style=MyFrame,frame=none,backgroundcolor={}}
+% \lstset{language=C++,frame=none}
+
+
+\lstset{%
+language   = [LaTeX]{TeX},%
+literate   = {"}{\textquotedbl}1,%
+ basicstyle = \ttfamily\setstretch{0.78},		% control the font size of codes
+columns    = flexible,%
+firstnumber=100,
+%% style for number
+keywordstyle={\color{javared}\bfseries},
+commentstyle=\color{javagreen}, %vsomb_col white comments
+%morecomment=[s][\color{javagreen}]{"""}{"""},
+upquote=true, 
+%% style for number
+numbers=none,
+resetmargins=true,
+xleftmargin=10pt,
+linewidth= \linewidth, 
+numberstyle=\tiny, 
+stepnumber=1, 
+numbersep=8pt, %
+frame=shadowbox,
+rulesepcolor=\color{black},
+procnamekeys={def,class},
+procnamestyle=\color{oneblue}\textbf,
+}
+
+
+
+
+
+
+
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{algpascal}
+
+\usepackage[compatible,refpage,prefix]{nomencl}
+\renewcommand{\nomname}{Notations}
+\renewcommand{\eqdeclaration}[1]{, \hfill page #1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  		Hyperlinks                            %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\PassOptionsToPackage{hyphens,lowtilde}{url}
+\usepackage[pdftex,linkcolor=test,citecolor=vsomb_col,
+colorlinks=true,pagebackref,bookmarks=true,plainpages=true,
+urlcolor=fb_col]{hyperref}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  		 Environnements                       %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\DefineVerbatimEnvironment{rcode}{lstlisting}
+{\framed,fontsize=\normalsize}
+\newcommand{\titlesec}[1]{\bigskip \begin{center}  {\sc - {#1} -} \end{center}}
+\newcommand{\titlefront}[1]
+{\vspace{5cm} \bigskip \begin{center} \textsc{\textbf{\huge #1}}\bigskip\end{center}
+\vspace{0.3cm}
+}
+\newcommand{\mailperso}[1]{\bigskip    {\noindent\sc {#1} } }
+
+\newcommand\mytodo[1]{\textcolor{red}{#1}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  		 Theorems etc.                        %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \newtheorem{theorem}{Théorème}[chapter]
+% \newtheorem{proposition}{Proposition}[chapter]
+% \newtheorem{lemme}{Lemme}[chapter]
+% \newtheorem{definition}{Définition}[chapter]
+% \newtheorem{col}{Corollaire}[chapter]
+% \newtheorem{exercice}{Exercice}[chapter]
+% \newtheorem{remarque}{Remarque}[chapter]
+
+
+\newtheorem{theorem}{Théorème}[section]
+\newtheorem{lemma}[theorem]{Lemme}
+\newtheorem{ex}{Exemple}[section]
+\newtheorem{corollary}[theorem]{Corollaire}
+\newtheorem{prop}[theorem]{Proposition}
+\theoremstyle{remark}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Définition}
+\newtheorem{rem}{Remarque}[section]
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  		Display		                      %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newenvironment{keywords}{
+       \list{}{\advance\topsep by0.35cm\relax\small
+       \leftmargin=1cm
+       \labelwidth=0.35cm
+       \listparindent=0.35cm
+       \itemindent\listparindent
+       \rightmargin\leftmargin}\item[\hskip\labelsep
+                                     \bfseries Mots-Clefs:]}
+     {\endlist}
+
+
+
+\addtolength{\oddsidemargin}{-5pt}
+\addtolength{\evensidemargin}{-5pt}
+\setlength{\parskip}{.05in}
+\setlength{\arraycolsep}{2pt}
+\numberwithin{section}{chapter}
+\numberwithin{equation}{chapter}
+\setlength{\fboxsep}{5pt}
+
+
+
+
+\makenomenclature
