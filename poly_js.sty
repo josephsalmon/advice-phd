@@ -162,8 +162,31 @@ procnamekeys={def,class},
 procnamestyle=\color{oneblue}\textbf,
 }
 
-% 
 
+\lstdefinestyle{cppsty}{ language = {C++},%
+basicstyle = \ttfamily\setstretch{1},%
+columns    = flexible,%
+keywordstyle=\color{javared},
+firstnumber=100,
+frame=shadowbox,
+showstringspaces=false,
+keywordstyle={\color{javared}\bfseries},
+commentstyle=\color{javagreen}, %vsomb_col white comments
+morecomment=[s][\color{javagreen}]{"""}{"""},
+upquote=true, 
+%% style for number
+numbers=none,
+resetmargins=true,
+xleftmargin=10pt,
+linewidth= \linewidth, 
+numberstyle=\tiny, 
+stepnumber=1, 
+numbersep=8pt, %
+frame=shadowbox,
+rulesepcolor=\color{black},
+procnamekeys={def,class},
+procnamestyle=\color{oneblue}\textbf,
+}
 
 
 % \lstdefinestyle{csty}{language=C++,style=numbers,style=MyFrame,frame=none,backgroundcolor={}}
@@ -184,6 +207,7 @@ upquote=true,
 %% style for number
 numbers=none,
 resetmargins=true,
+morekeywords=graphicspath,
 xleftmargin=10pt,
 linewidth= \linewidth, 
 numberstyle=\tiny, 
@@ -198,12 +222,13 @@ procnamestyle=\color{oneblue}\textbf,
 
 
 
+\usepackage[ruled,vlined,french]{algorithm2e}
 
 
-
-\usepackage{algpseudocode}
-\usepackage{algorithm}
-\usepackage{algpascal}
+% 
+% \usepackage{algpseudocode}
+% \usepackage{algorithm}
+% \usepackage{algpascal}
 
 \usepackage[compatible,refpage,prefix]{nomencl}
 \renewcommand{\nomname}{Notations}

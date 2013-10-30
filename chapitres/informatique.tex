@@ -1,0 +1,343 @@
+\section{Programmation}
+
+Pour les nouveaux en programmation, il existe de nombreux langages informatiques, ils sont très 
+différents des uns des autres. Nous en listerons ici un certain nombre avec des exemples d'utilisation 
+optimum. 
+Il existe 4 familles de code :
+
+\begin{enumerate}
+\item procédural (C, Fortran, Pascal, Basic, ...)
+\item orienté objet (Java, C\#, Python, ...)
+\item fonctionnel (OCaml, Lisp, ...)
+\item logique (Prolog)
+\end{enumerate}
+
+Les plus utilisées sont les deux premières, en sachant qu'il existe des hybrides notamment C++ 
+qui appartient dans sa structure même aux deux premières familles. 
+
+\section{Programmation Procédurale}
+
+Les langages procéduraux sont une suite de routines qui s'exécutent dans l'ordre ! Bref, c'est des ordres 
+données à la machines qui s'exécute pas à pas. C'est une recette de cuisine.\\
+
+Nous ne parlerons que du C. 
+
+\subsection{C}
+
+C'est un langage qui n'est pas simple à prendre en main et le déconseillerais à tout le monde sauf pour 
+une chose : Sa rapidité ! 
+
+\paragraph{Avantages du C}
+
+Tout ceci est purement subjectif et reflète la partialité totale des auteurs qui nierons
+ avoir pris de telles positions.
+\begin{itemize}
+\item une fois compilé, le C est très rapide, il est très proches des instructions comprises par la machine. 
+\item Si vous faites du temps réel \textbf{FAITES} du C.
+\end{itemize}
+
+\paragraph{Défauts du C}
+
+\begin{itemize}
+\item c'est dur
+\item c'est long pour coder en C
+\item faut compiler à chaque fois
+\item c'est pas portable (ce qui marche chez vous ne marche pas chez votre voisin)
+\item c'est vieux
+\item c'est prétentieux de coder en C
+\end{itemize}
+
+\section{Programmation orienté objet}
+
+La programmation orienté objet est difficile à définir et vous trouverez sur le net de nombreuses 
+définitions toutes plus précises et plus incompréhensibles les unes que les autres.
+ En bref, c'est la même chose que précédemment mais en mieux. C'est une recette de cuisine qui se 
+découpe en de nombreuses recette de cuisine ultra spécialisées (comment cuire la viandes,
+ comment assaisonner les légumes, comment faire la sauces).\\
+
+% Conseil : n'écoutez JAMAIS les vieux briscards du code qui vous parle de VRAI programmation objet 
+% ou de full OOP (oriented object programming), c'est des chieurs qu'il faut ignorer. 
+% Mais il faut savoir que l'orienté objet c'est le bien le reste c'est le mal. 
+
+Nous parlerons de 2 langages uniquement : C++ et Python. 
+% Me demandez pas pourquoi c'est juste que j'aime pas JAVA et que j'aime bien ces deux là! 
+
+\subsection{C++}
+
+Le C++ a été inventé pour faire du C orienté objet. En réalité c'est un hybride et introduit une
+nouveauté: les types templétés extrêmement utiles quand on sait les utiliser.
+
+
+\paragraph{Avantages du C++}
+
+\begin{itemize}
+\item c'est orienté objet
+\item c'est presque aussi rapide que du C mais moins quand même
+\item les types templétés c'est top
+\item les vrais, ils font du C++
+\item on peut faire facilement du calcul parallèle
+\end{itemize}
+
+\paragraph{Défaut du C++}
+
+\begin{itemize}
+\item c'est toujours dur
+\item faut compiler
+\item c'est presque aussi long pour coder
+\item c'est toujours pas portable
+\end{itemize}
+
+\subsection{Python}
+
+Python c'est bien ... C'est tout, faites du Python si les performances vous vous en foutez!
+
+\paragraph{Avantages de Python}
+\begin{itemize}
+\item c'est simple
+\item c'est réutilisable tel quel ! 
+\item c'est orienté objet
+\item c'est interprété
+\item les gentils font du Python
+\item c'est court à coder et à  tester
+\item les tests en Python c'est cool
+\item c'est portable
+\item on peut faire comme du Matlab mais en gratuit !
+\item pip (Python Package Index): super pratique pour installer des nouveaux packages!
+\end{itemize}
+
+\paragraph{Défauts de Python}
+\begin{itemize}
+\item il n'y a pas les templates
+\item n'importe qui peut faire n'importe quoi !
+\item c'est LENT, c'est vraiment LENT
+\end{itemize}
+
+\section{Dérivé et autres langages liés à des programmes}
+
+Il existe des logiciels qui ont tellement apportés dans un domaine de recherche qu'ils sont 
+indispensables dans votre travail. Notamment, si vous faites des statistiques, vous ne pourrez
+ faire l'impasse d'une bonne formation en R. Plus généralement, Matlab a réussit à s'imposer 
+comme un standard dans la programmation scientifique.\\
+
+Ce sont de bons logiciels qu'il est intéressant d'utiliser, notamment dans le cas de Matlab, 
+vous aurez la possibilité d'utiliser tout la base mathworks 
+(\href{http://www.mathworks.fr/matlabcentral/fileexchange}). Toutefois, il est intéressant 
+de noter que la grammaire de programmation Python se reprochant de celle de Matlab, il a 
+été développé en Python des bibliothèques et outils permettant de programmer en Python comme en Matlab: 
+numpy (\href{http://www.numpy.org/}),
+ scipy (\href{http://www.scipy.org/}) et matplotlib (\href{http://matplotlib.org/}).\\
+
+Python tend à devenir un standard 
+
+
+\section{Trucs et astuces pour savoir ce que je dois choisir}
+
+En fonctions de différentes problématiques il est de bon ton de savoir ce que vous devriez utiliser :
+
+\begin{itemize}
+\item Temps réel : C et c'est TOUT !!!!
+\item traitement d'image ou du son: Si vous traitez de grosses données C++ Sinon Python ou Matlab
+\item Vision 3D : C++ avec opencv (même si cette bibliothèque de fonctions montrent des signe 
+évident d'incompétence, elle tends à devenir classique) et Python si vous avez de toutes petites données
+\item Computer graphic : C++ 
+\item stat et machine learning : R, Python et Matlab
+\end{itemize}  
+
+\section{Bonnes pratiques en programmation scientifiques}
+
+\subsection{Bonnes pratiques générales : DOCUMENTATION}
+
+La première est unique règle qui compte c'est : Documentez ! \\
+
+Le reste ne peut être que des conseils superflues, Documentez ! \\
+
+Une application, programme code n'est jamais totalement perdu si il est accompagné d'une documentation,
+ documentez !\\
+
+Il ne sert à rien de dire qu'une documentation doit contenir tel ou tel section, il faut juste 
+qu'elle permette de comprendre le but du code, comment on le lance et de quoi il a besoin, documentez! \\
+
+Plus votre code sera documenté et j'entends documentation externe (README, User case, etc ...) aussi 
+bien que documentation interne (commentaire du code), et plus vos papiers seront cités. 
+Et plus vos papiers seront cités et plus vous pourrez obtenir un post-doc, documentez ! \\
+
+Documenter ne sert pas seulement à la communauté, elle est avant tout là pour vous aider. 
+A la question :"A quoi sert cette fonction" une documentation permet de rappeler qu'elle
+ est là pour minimiser un bidules selon un algo quelconque ! De plus une fois votre post-doc
+ effectué et votre poste trouvé, vous aurez votre premier doctorant à qui vous devrez donner vos codes:
+ et la documentation permet au doctorant perdu de comprendre votre démarche à quoi servent 
+les différentes pièces du puzzle et comment elles s'imbriquent. Documentez !\\
+
+\paragraph{README}
+
+Tout le monde ne sera pas d'accord sur ce que doit contenir un bon README, malgré tout je tente une
+ liste assez général et parfaitement subjective sur ce que j'aime trouver dans un README : 
+\begin{itemize}
+\item une description détaillée du code. permet à tout le monde de savoir qu'elle est votre but ultime
+\item une description très détaillée des entrées, sorties et paramètres. N'ayez pas peur de dire que
+ vous ne traitez QUE tel cas ou que tel jeux de paramètres ou tel type d'entrée. Dans le cas où vous 
+partageriez votre code et qu'il soit un tant soit peu intéressant, il se peu que la communauté s'empare 
+de votre oeuvre te vous aide à l'améliorer. Ils ne le feront jamais pour un code non documenté ou trop
+ succinctement et encore moins pour un code prétentieux qui ment sur ses possibilités, un peu d'humilité 
+vous apportera beaucoup plus que des dissimulations.
+\item un lien avec votre article, TOUS vos codes doivent être en relation avec des publications qui 
+devront être cités en cas d'utilisation : c'est des citations gratuites et c'est très important ! 
+\item un manuel d'installation (le coup de compilation : ./make ... Allez crever !) contenant les 
+dépendances AVEC leurs version (pas d'opencv tout seul par pitié : v1.16 permettra à quelqu'un de 
+voir d'un seul coup d'oeil s'il va passé trois heure ou 2 minutes à compiler votre code).
+\item des exemples d'utilisations (./toto -r 65 plop.dat) et potentiellement un user case. Pour que
+ cette partie soit intéressante et si le code est en correspondance avec une publication : mettez 
+un ou deux exemples développés dans votre papier en exemple.
+\item Si possible un schéma de votre code (comme un arbre généalogique qui partirais de la fonction
+ principale appelé par l'exécution du code vers les codes plus spécialisés)
+\end{itemize}
+
+\paragraph{Commentaires}
+
+Sur les commentaires et pour avoir lu énormément de code: un simple petit commentaire en début de 
+fonction n'est pas commenter son code ! \\
+
+Un commentaire chaque fonction sur son but, ses entrées, ses sorties et sur sa place dans l'algorithme. \\
+
+Un commentaire par boucle et par calcul important. Exemple :\\
+
+int test\_tmp\_of\_doom(int *var, double **plop) //ici, sans documentation déjà je suis perdu \\ 
+/* fonction qui prend en entrée un tableau de référence de pixel et une image de masque de covariance
+ et qui renvoie l'indice du pixel contenant la plus haute valeur de truc */\\
+/* Cette fonction est util dans le calcul des extrema interdépendant des chaînes de kikoolol */\\
+
+int plop=42,temp=-1;\\
+int i=0;\\
+
+for(i=0;i<plop;i++){\\ 
+/*parcours des index ! */\\
+if (var[i] < plop[var[i]][i])/*cherche plus haute valeur de truc*/\\
+/* il n'y a pas de segmentation fault car les indices sont compris entre 0 et 40 ... bref tout
+ commentaire permettant de comprendre ce geste singulier et fort peu ordinaire */\\
+temp = i;\\
+}\\
+
+Bref si vous regardez ce code, les variables sont mal nommées et rien n'a de sens MAIS les
+ commentaires explique tout, sans ça, c'est le flou le plus total\\
+Un bon conseil est parfois de se servir des commentaires comme colonne vertébrale de votre 
+code. Vous commencez d'abord par écrire les commentaires décrivant en détail votre algorithme 
+PUIS vous remplissez les trous! Avec ça plus jamais aucun de problème ! \\
+
+\paragraph{nomenclature}
+
+Beaucoup de personnes vous donnerons de bons conseils et ne les suivront pas et soyons honnêtes, 
+tout le monde a des variables qui s'appelle toto ou tmp, et c'est pas grave, si il s'agit de 
+variable TRÈS local pas de problèmes. Voici juste quelques petits conseils pour mieux choisir 
+les noms (et je vous jure que vous ne trouverez ces conseils nul part!):\\
+
+\begin{itemize}
+\item Garder la même nomenclature dans TOUT votre code (un tableau d'index qui s'appelle "index[]" 
+ne doit pas s'appeler autrement ailleurs "Index[]" "var[]", c'est la confusion assurée)
+\item Choisissez comme nom de variables celles que vous utiliserez dans votre article 
+(si un truc est appelé béta dans un article sur lequel vous vous fondez appelez votre put*** 
+de variable "beta" et c'est tout!)
+\item Éviter de mettre un coup des majuscules pour les fonctions puis en majuscules etc ... 
+Mettez tout en minuscule (je me ferais tuer par TOUS les informaticiens s'ils savaient que je 
+donne ce genre de conseils) si vous n'êtes pas assez rigoureux pour garder le même typage tout 
+au long de vos codes (majuscules pour fonctions, minuscules pour les variables)
+\end{itemize}
+
+
+Voilà c'est tout pour les conseils de père castor, maintenant, les conseils de programmation\\
+
+\subsection{Bonnes pratiques générales dans le code}
+
+\begin{itemize}
+\item Testez chaque entrée fourni par l'utilisateur, n'oubliez jamais que c'est un débile congénital
+ qui n'est là que pour foutre en l'air votre code et expérimenter les bugs laissés négligemment par 
+vous en pensant qu'aucun crétin ne ferait ça ! De plus cet utilisateur c'est peut-être vous dans 
+le futur ! Donc on test et on revoie des erreurs compréhensible par tout le monde de pourquoi ça 
+marche pas : "on a dit une image png en entrée pas autre chose!"
+\item faites un --help ou un usage dans le cas où les personnes ne rentre QUE le nom du programme : 
+je sais s'ils font ça c'est qu'ils n'ont pas lu le README amoureusement écrit par vos soin! Un bon
+ --help peut être un beau RTFM!
+\item INDENTEZ votre code
+\item jamais de fonction de 4 bornes de long (si ça dépasse 50 lignes de code, c'est que c'est trop
+ long et que vous devriez externaliser des fonctions)
+\end{itemize}
+
+\paragraph{Debugger un code}
+
+Vous aurez la possibilité d'utiliser un débugger, moi je n'en ai jamais utilisé, pour la simple et
+ bonne raison que je n'ai jamais pris le temps d'apprendre à les utiliser et que lorsque je débuggue,
+ c'est que je suis proche de finir et donc que je suis pressé.\\
+Déboguer va vous prendre beaucoup de temps, incluez le dans vos prévisions, si un code doit marcher 
+dans 2 semaines, comptez 3 semaines avec une bonne semaine de debuggage et de tests. Votre ami pour
+ le débuggage est simplement la fonction d'écriture sur la sortie standard (printf !). Cela vous 
+permet de savoir d'où  viens le bug et souvent de mettre en avant les différents états des variables.\\
+
+
+\paragraph{C/C++}
+
+Pour éviter les problèmes : Allouez toujours la mémoires là où vous la libérer. C'est quelque chose
+ qui m'exaspère et fini invariablement par créer des fuites mémoires de partout. Si vous faites 
+un malloc dans une fonction c'est que vous faites un free dans la MÊME fonction. \\
+
+En C++, lorsque vous devez passer des images, matrices, structures, tableaux, string  etc ... Qui 
+peuvent contenir beaucoup de données FAITES TOUJOURS un passage par référence et pas par copie :\\
+
+int plop (std::string toto) //(copie dans la mémoire toto donc si le string fait 2Go, bah à chaque
+ appel de la fonction vous recopier 2Go => pas ultime!)\\
+
+int plop (const std::string\& toto) //utilise un pointeur sur la mémoire contenant les 2Go sans
+ jamais les copier ! Le const permet d'éviter de pouvoir modifier la chaîne de caractère !\\
+
+\paragraph{Python}
+
+Lorsque vous utilisez des fonction de bibliothèques externes, éviter : \\
+
+\begin{lstlisting}[style=pythonsty]
+from lib_externe..sous_fnctn import read_image
+...
+read_image(input)
+\end{lstlisting}
+Car lorsque vous appellerez cette fonction on ne saura pas d'où elle vient, ainsi et même si 
+c'est embêtant : \\
+
+\begin{lstlisting}[style=pythonsty]
+import lib_externe
+...
+lib_externe.fnctn.sous_fnctn.read_image(input) #c'est plus clair !
+\end{lstlisting}
+Le Python est un langage moins rigoureux que le C/C++ donc il vous faut l'être d'autant plus
+ sinon le débuggage peut être un enfer 
+
+
+
+
+\section{Langage de programmation et outils de calcul matriciel}
+
+\mytodo{Jo, Alex: Python}
+
+\mytodo{Jo, Charles, Benoit}
+
+\paragraph{Matlab}
+
+Prescrivez le FOR, il devrait être interdit en Matlab. Il est lent mais lent ! Bref Matlab 
+fait des calcul matricielle et le fait bien ! Vous ne devriez utiliser Matlab QUE pour ça !\\
+
+Si vous ne connaissez rien d'autre, pas grave mais au moins approfondissez vos connaissances 
+en Matlab.\\
+
+Sachez de plus qu'il existe scypy, matplotlib  qui sont des bibliothèques de fonctions Python 
+qui permette de programmer comme en Matlab mais sans Matlab ! (Et le for est bien plus rapide 
+en Python que sous Matlab)\\
+
+
+
+\mytodo{Jo: R, Adoop}
+
+R c'est pour les statistiques uniquement. C'est truffé d'erreur et d'inconsistance, mais
+toute la communauté s'en sert (académiques, banques, \textit{hedges fund}, etc.).
+
+\section{Calcul formel}
+\mytodo{Yann: Sage,Maple, mathematica}
+
+
+
+

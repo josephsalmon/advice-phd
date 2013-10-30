@@ -1,0 +1,65 @@
+
+\section{Les presentations: Beamer, Powerpoint ou Keynote}
+
+\mytodo{Jo}
+
+\section{Cr\'eation graphique}
+Pour les figures il est bon de connaître un
+logiciel au moins pour la retouche d'image ou pour la création de schéma.
+On pourra utiliser des outils ``open source'' tel  \href{http://inkscape.org/}{Inkscape}
+ dont le format (vectoriel)
+d'export est .svg et qui supporte l'insertion de symboles \LaTeX. 
+ On peut consulter: \url{http://famelis.wordpress.com/2011/04/12/latex-and-inkscape/}
+pour plus d'information.
+
+En guise d'exemple la figure \ref{fig:smv} est produite par la commande:
+\begin{lstlisting}
+\begin{figure}[htb] 
+\centering \def\svgwidth{200pt} 
+\input{images/separateur_jo.pdf_tex} 
+\caption{Marge et hyperplan s\'parateur (cas lin\'aire)} 
+\label{fig:smv}
+\end{figure}
+\end{lstlisting}
+Dans le cas de la création de ce document, on dispose dans un sous-répertoire local ``/image'',
+d'un fichier \lstinline+separateur_jo.pdf_tex+ et d'un fichier \lstinline+separateur_jo.tex+
+tous deux crées par \href{http://inkscape.org/}{Inkscape}.
+Attention tout de m\^eme dans l'utilisation de sous dossiers,
+il faut éventuellement penser \`a éditer le fichier
+\lstinline+separateur_jo.tex+
+et a changer la commande \lstinline+separateur_jo.pdf_tex+
+par \lstinline+images/separateur_jo.pdf_tex+
+
+
+\begin{figure}[htb] 
+\centering \def\svgwidth{400pt} 
+\input{images/separateur_jo.pdf_tex} 
+\caption{Marge et hyperplan séparateur (cas linéaire)} 
+\label{fig:smv}
+\end{figure}
+
+
+\section{Création de sites web: visibilité en ligne}
+Il est des plus importants en recherche non seulement de faire des travaux de bonne qualité
+mais encore de rendre ces travaux disponibles facilement sur Internet. Cela peut passer par la création
+d'un site personnel sur le site de votre employeur (ou bien par la création d'un site personnel),
+la création d'un compte \href{http://scholar.google.com}{Scholar Google}, ou encore la soumission de papier
+sur Hal ou arXiv.
+Il est également important de fournir en ligne les codes numériques qui permettent de recréer les 
+expériences commentées dans un article scientifique. Cette motivation se nomme 
+la recherche reproductible (\lcf par exemple le site \href{http://www.ipol.im/}{IPOL} dans le domaine
+du traitement des images)  et vise à fournir comme dans les sciences expérimentales des expériences 
+que l'on peut reproduire à souhait. C'est la seule manière de garantir que d'autres experimentateurs
+peuvent reproduire nos propres résultats. Hélas, cette phase cruciale n'est pas toujours complètement 
+prise en compte par les chercheurs de peur que quelqu'un trouve un \textit{bug} dans leur code.
+De plus au cours du processus de relecture des travaux de recherches (\textit{review}) cet
+aspect est parfois complètement délaissé par l'équipe éditoriale.
+
+\begin{itemize}
+ \item  html:
+ \item  css:
+ \item  php:
+\end{itemize}
+
+
+\mytodo{Jo, Benoit.}

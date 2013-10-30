@@ -113,7 +113,9 @@
 %      \parindent\z@
      \vspace*{-1in}
       \begin{center}%
-      {\scalebox{0.15}{\includegraphics{images/logoENSAE.jpg}}\par}%
+      {\scalebox{0.15}
+%       {\includegraphics{images/logoENSAE.jpg}}
+      \par}%
       {\scalebox{0.55}\par}%
       \vspace{\stretch{1.5}}
       {\LARGE \noindent\@title \par}%

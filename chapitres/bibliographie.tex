@@ -1,0 +1,50 @@
+
+
+La gestion de la bibliographie est une étape importante à automatiser dans la perspective 
+de la rédaction d'une thèse qui comprendra vraisemblablement plusieurs centaines de références.
+Il est recommandé d'utiliser bibtex pour cela. De plus, il est bon de veiller à une harmonisation
+des noms des références une bonne fois pour toute. Un conseil est de plutôt garder un fichier 
+qui contient toutes les entrées que l'on fait grossir au fur et \`a mesure de ces lectures.
+De plus il est bon de veiller à une connexion entre le fichier contenant les noms des références
+et le dossier dans lequel on garde ces références. Sous Linux un bon candidat pour gérer
+cette interconnexion est \href{http://jabref.sourceforge.net/}{Jabref}.
+
+
+Pour les références bibliographiques,  il faut créer un autre fichier d'extension .bib, qui est 
+l'extension des fichiers ``\textbf{bibtex}''. On le met également dans le dossier qui contient le 
+fichier .tex que l'on rédige. Le fichier de la bibliographie associée à ce document est disponible
+ \href{http://josephsalmon.eu/enseignement/M1/refs.bib}{là}.  On présente les articles, 
+livres et autres sites webs de la façon suivante : (on peut trouver également ce type d'information
+ tout rempli sur internet, comme sur le site \href{http://ams.u-strasbg.fr/mathscinet/}{MathSciNet}
+ par exemple.)\medskip
+\begin{lstlisting}
+@inproceedings{Tsybakov03, 
+  author    = {A. B. Tsybakov},
+  title     = {Optimal Rates of Aggregation}, 
+  booktitle = {COLT}, 
+  year      = {2003}, 
+  pages     = {303-313}, 
+}
+\end{lstlisting}
+
+On doit alors compiler la bibliographie avec la commande bibtex. 
+Selon le logiciel, ou la mani\`ere de faire,   (par exemple dans Kile) il faut aller dans l'onglet 
+``\textbf{build}'' ou ``\textbf{construire}'', puis cliquer sur ``\textbf{compile}''. Le type de 
+compilation est alors Bibtex.\medskip
+
+La citation apparaît à l'endroit voulu grâce à la commande  \lstinline+\ref{nom_citation}+. 
+Tout à la fin du fichier .pdf, on trouve alors  les références voulues avec tous les détails que l'on
+ a précisés 
+sur le document cité. 
+Pour cela il faut  écrire juste avant \lstinline+\end{document}+ les commandes 
+\lstinline+\bibliography{nom du fichier de la bibliographie}+
+\lstinline+\bibliographystyle{alpha}+ pour que les citations apparaissent avec des lettres et l'année
+ et non juste des numéros. Par exemple on peut parler de l'article \cite{Tsybakov03} ou bien du livre 
+\cite{Catoni04}. Les articles non cités n'apparaissent pas. \medskip
+
+On remarquera qu'à la fin de la bibliographie, les pages où une référence est citée apparaissent sous
+ forme de liens hypertextes. C'est l'utilisation du package \lstinline+pagebackref+ qui rend cela possible.
+Pour plus d'informations sur Bibtex en français : 
+\href{http://www.irit.fr/~Alain.Crouzil/jaffre/LOGICIELS/LATEX_BIBTEX/bibtex1.html}{Le site de Gaël Jaffré},
+\href{http://fr.wikipedia.org/wiki/BibTeX}{Wikipedia},  
+et en anglais :  \href{http://www.bibtex.org/}{www.bibtex.org} 
