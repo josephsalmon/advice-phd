@@ -3,7 +3,8 @@
 Pour les nouveaux en programmation, il existe de nombreux langages informatiques, ils sont très 
 différents des uns des autres. Nous en listerons ici un certain nombre avec des exemples d'utilisation 
 optimum. 
-Il existe 4 familles de code :
+Il existe 4 familles de code : %jamais été très convaincu par les familles de code on retrouve du fonctionnel et de l'objet
+%dans presque totues les familles par exemple (Yann)
 
 \begin{enumerate}
 \item procédural (C, Fortran, Pascal, Basic, ...)
@@ -17,15 +18,16 @@ qui appartient dans sa structure même aux deux premières familles.
 
 \section{Programmation Procédurale}
 
-Les langages procéduraux sont une suite de routines qui s'exécutent dans l'ordre ! Bref, c'est des ordres 
-données à la machines qui s'exécute pas à pas. C'est une recette de cuisine.\\
+Les langages procéduraux sont une suite de routines qui s'exécutent dans l'ordre ! Bref, ce sont des ordres 
+donnés à la machine qui s'exécutent pas à pas. C'est une recette de cuisine.\\
 
 Nous ne parlerons que du C. 
 
 \subsection{C}
 
-C'est un langage qui n'est pas simple à prendre en main et le déconseillerais à tout le monde sauf pour 
-une chose : Sa rapidité ! 
+C'est un langage qui n'est pas simple à prendre en main et le déconseillerais sauf pour 
+une chose : Sa rapidité ! Pour un chercheur qui n'est pas versé dans l'art de la programmation,
+il vaut mieux apprendre un langage plus moderne.
 
 \paragraph{Avantages du C}
 
@@ -34,17 +36,21 @@ Tout ceci est purement subjectif et reflète la partialité totale des auteurs q
 \begin{itemize}
 \item une fois compilé, le C est très rapide, il est très proches des instructions comprises par la machine. 
 \item Si vous faites du temps réel \textbf{FAITES} du C.
+\item Vous pouvez facilement faire du bon code parallèle puisque vous controlez la mémoire.
+Vous pouvez par exemple utiliser OPENMP \href{http://openmp.org/} qui marche aussi sous C++.
+\item Le C et c'est un langage répandu et beaucoup de gens le comprennent.
 \end{itemize}
 
 \paragraph{Défauts du C}
 
 \begin{itemize}
-\item c'est dur
-\item c'est long pour coder en C
-\item faut compiler à chaque fois
-\item c'est pas portable (ce qui marche chez vous ne marche pas chez votre voisin)
-\item c'est vieux
-\item c'est prétentieux de coder en C
+\item il faut s'occuper de la gestion mémoire soi-même
+\item coder en C est souvent plus long que dans un langage moderne
+\item il n'y a pas de libraire par défaut pour les structures de données courantes ou les fonctions souvent utiles
+%\item faut compiler à chaque fois
+%\item c'est pas portable (ce qui marche chez vous ne marche pas chez votre voisin)
+%\item c'est vieux
+%\item c'est prétentieux de coder en C
 \end{itemize}
 
 \section{Programmation orienté objet}
@@ -65,7 +71,7 @@ Nous parlerons de 2 langages uniquement : C++ et Python.
 \subsection{C++}
 
 Le C++ a été inventé pour faire du C orienté objet. En réalité c'est un hybride et introduit une
-nouveauté: les types templétés extrêmement utiles quand on sait les utiliser.
+nouveauté : les types templétés extrêmement utiles quand on sait les utiliser.
 
 
 \paragraph{Avantages du C++}
@@ -74,22 +80,26 @@ nouveauté: les types templétés extrêmement utiles quand on sait les utiliser
 \item c'est orienté objet
 \item c'est presque aussi rapide que du C mais moins quand même
 \item les types templétés c'est top
-\item les vrais, ils font du C++
-\item on peut faire facilement du calcul parallèle
+%\item les vrais, ils font du C++
+\item on peut faire facilement du calcul parallèle % mais en C aussi
 \end{itemize}
 
 \paragraph{Défaut du C++}
 
 \begin{itemize}
-\item c'est toujours dur
-\item faut compiler
-\item c'est presque aussi long pour coder
-\item c'est toujours pas portable
+\item c'est compliqué à mettre en oeuvre
+%\item faut compiler
+%\item c'est presque aussi long pour coder
+\item c'est toujours pas portable %qu'est ce que tu entends par c'est pas portable ? 
 \end{itemize}
 
 \subsection{Python}
 
-Python c'est bien ... C'est tout, faites du Python si les performances vous vous en foutez!
+Python est un langage moderne, agréable d'utilisation et concis.
+Il est parfaitement adapté à l'écriture de programmes dont les performances ne sont
+pas importantes. Ce langage est enseigné au lycée et en prépa et tends à devenir une référence
+dans les universités. Il est donc utile de le connaître si vous avez à enseigner.
+
 
 \paragraph{Avantages de Python}
 \begin{itemize}
@@ -97,18 +107,18 @@ Python c'est bien ... C'est tout, faites du Python si les performances vous vous
 \item c'est réutilisable tel quel ! 
 \item c'est orienté objet
 \item c'est interprété
-\item les gentils font du Python
+%\item les gentils font du Python
 \item c'est court à coder et à  tester
-\item les tests en Python c'est cool
+\item les tests en Python c'est cool %???
 \item c'est portable
-\item on peut faire comme du Matlab mais en gratuit !
+\item on peut faire comme du Matlab mais en gratuit ! %à expliquer plus loin
 \item pip (Python Package Index): super pratique pour installer des nouveaux packages!
 \end{itemize}
 
 \paragraph{Défauts de Python}
 \begin{itemize}
 \item il n'y a pas les templates
-\item n'importe qui peut faire n'importe quoi !
+\item n'importe qui peut faire n'importe quoi ! %ça n'est pas typé
 \item c'est LENT, c'est vraiment LENT
 \end{itemize}
 
@@ -124,8 +134,7 @@ vous aurez la possibilité d'utiliser tout la base mathworks
 (\href{http://www.mathworks.fr/matlabcentral/fileexchange}). Toutefois, il est intéressant 
 de noter que la grammaire de programmation Python se reprochant de celle de Matlab, il a 
 été développé en Python des bibliothèques et outils permettant de programmer en Python comme en Matlab: 
-numpy (\href{http://www.numpy.org/}),
- scipy (\href{http://www.scipy.org/}) et matplotlib (\href{http://matplotlib.org/}).\\
+numpy (\href{http://www.numpy.org/}), scipy (\href{http://www.scipy.org/}) et matplotlib (\href{http://matplotlib.org/}).\\
 
 Python tend à devenir un standard 
 
@@ -136,7 +145,7 @@ En fonctions de différentes problématiques il est de bon ton de savoir ce que 
 
 \begin{itemize}
 \item Temps réel : C et c'est TOUT !!!!
-\item traitement d'image ou du son: Si vous traitez de grosses données C++ Sinon Python ou Matlab
+\item Traitement d'image ou du son: Si vous traitez de grosses données C++ sinon Python ou Matlab
 \item Vision 3D : C++ avec opencv (même si cette bibliothèque de fonctions montrent des signe 
 évident d'incompétence, elle tends à devenir classique) et Python si vous avez de toutes petites données
 \item Computer graphic : C++ 
@@ -149,9 +158,9 @@ En fonctions de différentes problématiques il est de bon ton de savoir ce que 
 
 La première est unique règle qui compte c'est : Documentez ! \\
 
-Le reste ne peut être que des conseils superflues, Documentez ! \\
+Le reste ne peut être que des conseils superflus, Documentez ! \\
 
-Une application, programme code n'est jamais totalement perdu si il est accompagné d'une documentation,
+Une application, un programme, un code n'est jamais totalement perdu si il est accompagné d'une documentation,
  documentez !\\
 
 Il ne sert à rien de dire qu'une documentation doit contenir tel ou tel section, il faut juste 
@@ -173,7 +182,7 @@ les différentes pièces du puzzle et comment elles s'imbriquent. Documentez !\\
 Tout le monde ne sera pas d'accord sur ce que doit contenir un bon README, malgré tout je tente une
  liste assez général et parfaitement subjective sur ce que j'aime trouver dans un README : 
 \begin{itemize}
-\item une description détaillée du code. permet à tout le monde de savoir qu'elle est votre but ultime
+\item une description détaillée du code. Permet à tout le monde de savoir quel est votre but ultime
 \item une description très détaillée des entrées, sorties et paramètres. N'ayez pas peur de dire que
  vous ne traitez QUE tel cas ou que tel jeux de paramètres ou tel type d'entrée. Dans le cas où vous 
 partageriez votre code et qu'il soit un tant soit peu intéressant, il se peu que la communauté s'empare 
@@ -184,7 +193,7 @@ vous apportera beaucoup plus que des dissimulations.
 devront être cités en cas d'utilisation : c'est des citations gratuites et c'est très important ! 
 \item un manuel d'installation (le coup de compilation : ./make ... Allez crever !) contenant les 
 dépendances AVEC leurs version (pas d'opencv tout seul par pitié : v1.16 permettra à quelqu'un de 
-voir d'un seul coup d'oeil s'il va passé trois heure ou 2 minutes à compiler votre code).
+voir d'un seul coup d'oeil s'il va passer trois heure ou 2 minutes à compiler votre code).
 \item des exemples d'utilisations (./toto -r 65 plop.dat) et potentiellement un user case. Pour que
  cette partie soit intéressante et si le code est en correspondance avec une publication : mettez 
 un ou deux exemples développés dans votre papier en exemple.
@@ -228,7 +237,7 @@ PUIS vous remplissez les trous! Avec ça plus jamais aucun de problème ! \\
 Beaucoup de personnes vous donnerons de bons conseils et ne les suivront pas et soyons honnêtes, 
 tout le monde a des variables qui s'appelle toto ou tmp, et c'est pas grave, si il s'agit de 
 variable TRÈS local pas de problèmes. Voici juste quelques petits conseils pour mieux choisir 
-les noms (et je vous jure que vous ne trouverez ces conseils nul part!):\\
+les noms (et je vous jure que vous ne trouverez ces conseils nulle part!):\\
 
 \begin{itemize}
 \item Garder la même nomenclature dans TOUT votre code (un tableau d'index qui s'appelle "index[]" 
@@ -328,7 +337,8 @@ Sachez de plus qu'il existe scypy, matplotlib  qui sont des bibliothèques de fo
 qui permette de programmer comme en Matlab mais sans Matlab ! (Et le for est bien plus rapide 
 en Python que sous Matlab)\\
 
-
+Il existe une interface entre C/C++ et Matlab. C'est à dre que vous pouvez écrire des petits bout de code en C
+pour les parties importantes de votre code et les itégrer grâce à des fichiers .mex dans un code matlab.
 
 \mytodo{Jo: R, Adoop}
 
@@ -338,6 +348,16 @@ toute la communauté s'en sert (académiques, banques, \textit{hedges fund}, etc
 \section{Calcul formel}
 \mytodo{Yann: Sage,Maple, mathematica}
 
+
+\paragraph{Sage}
+
+Développé depuis quelques années comme une tentative de remplacement de tous les
+autres logiciels de math formel, SAGE \href{http://www.sagemath.org/} est un logiciel très intéressant.
+C'est principalement un ensemble de programmes python qui interface tous les logiciels
+libres de calcul symbolique (combinatoires, graphes, polynômes, corps \dots)
+Vos programmes Sage sont en fait du Python et l'utilisation est très proche des 
+autres librairie de python scientifique.
+Notez que c'est un logiciel libre, activement développé notamment par des chercheurs français.
 
 
 
