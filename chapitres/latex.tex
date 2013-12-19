@@ -21,14 +21,14 @@ Si en sortie on veut un fichier pdf : il faut faire ``\textbf{pdfLatex}'' (mieux
 avec des hyperliens et des images de formats standards).
 
 Le fichier Latex du document que vous êtes en train de lire est  disponible ici : 
-\href{http://people.math.jussieu.fr/~salmon/enseignement/M1/introlatex.tex}{ceci est un lien hypertexte}.  
+\href{http://josephsalmon.eu/enseignement/M1/introlatex.tex}{ceci est un lien hypertexte}.  
 Son extension est  .tex. Une fois le fichier compilé,  on obtiendra un ``joli'' document en format .pdf 
 ou bien .ps. Pour visualiser le résultat il suffit d'aller dans l'onglet  ``\textbf{build}'' 
 (ou constuire), choisir ``\textbf{view}`` (ou voir) puis de sélectionner ``\textbf{Viewpdf}'' 
 (si l'on a fait pdfLatex).\medskip
 
 Ceci fait, on choisit la classe de document  que l'on veut créer.  Pour les projets,  
-la classe ``\textbf{article}'' est recommandée (les élèves motivés qui voudraient écrire un 
+la classe ``\textbf{article}'' est recommandée (les plus motivés qui voudraient écrire un 
 livre entier pourront utiliser la classe ``\textbf{book}''). Le document commence donc par la 
 commande :\medskip
 
@@ -191,7 +191,7 @@ de texte classique. Voici le code pour insérer l'image ci-dessous : \medskip
 \centerline{(B) un autre}
 \end{minipage} 
 \caption{Des graphiques encore des graphiques...}
-\label{fig:ma\_figure}
+\label{fig:ma_figure}
 \end{figure}
 \end{lstlisting} 
 
@@ -218,7 +218,7 @@ de texte classique. Voici le code pour insérer l'image ci-dessous : \medskip
 L'image insérée doit se trouver par défaut dans le même répertoire où se trouve le fichier .tex 
 que vous écrivez. On peut d\'eclarer \`a la main les sous dossiers, ou bien cr\'eer une fois
 pour toute un dossier \lstinline+images+ et d\'eclarer son chemin d'acc\`es dans le préambule
-une fois pour toute avec la commande:
+avec
 \begin{lstlisting}
 \graphicspath{{images/}} 
 \end{lstlisting}
@@ -261,11 +261,8 @@ On pourra utiliser la ligne suivante pour définir divers packages utiles  d'un 
 
 \section{Insérer un algorithme}
 Plutôt que de donner un fichier de programmation, il peut être utile d'introduire dans son document
- un schéma de l'algorithme que l'on a utilisé. Pour cela, on peut choisir les packages suivants :\medskip
-
-\begin{lstlisting}
-\usepackage{algpseudocode}
-\end{lstlisting}
+ un schéma de l'algorithme que l'on a utilisé. Pour cela, on peut choisir le package 
+\lstinline+algpseudocode+
 
 On peut alors obtenir  l'exemple suivant :\medskip 
 

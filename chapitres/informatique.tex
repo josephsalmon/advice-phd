@@ -78,9 +78,8 @@ nouveauté : les types templétés extrêmement utiles quand on sait les utilise
 \subsubsection*{Avantages du C++}
 
 \begin{itemize}
-\item c'est orienté objet
 \item c'est presque aussi rapide que du C mais moins quand même
-\item les types templétés c'est top
+\item les types templétés sont tr\`es pratiques \mytodo{pour???}
 %\item les vrais, ils font du C++
 \item on peut faire facilement du calcul parallèle % mais en C aussi
 \end{itemize}
@@ -98,25 +97,26 @@ nouveauté : les types templétés extrêmement utiles quand on sait les utilise
 
 Python est un langage moderne, agréable d'utilisation et concis.
 Il est parfaitement adapté à l'écriture de programmes dont les performances ne sont
-pas importantes. Ce langage est enseigné au lycée et en prépa et tends à devenir une référence
+pas importantes. Ce langage est enseigné au lycée et en classes préparatoires et tends à devenir une référence
 dans les universités. Il est donc utile de le connaître si vous avez à enseigner.
 
-Pour apprendre le python, vous pouvez utiliser le site \href{http://www.codecademy.com/tracks/python}{codecademy} 
+Pour apprendre le python, vous pouvez utiliser le site 
+\href{http://www.codecademy.com/tracks/python}{codecademy} 
 qui donne des exercices en ligne pour apprendre par l'exemple.
-
+Le livre de Kevin Sheppard peut aussi s'avérer utile: 
+\href{http://www.kevinsheppard.com/images/0/09/Python_introduction.pdf}{Python Introduction}
 
 \subsubsection*{Avantages de Python}
 \begin{itemize}
 \item c'est simple
 \item c'est réutilisable tel quel ! 
-\item c'est orienté objet
 \item c'est interprété
 %\item les gentils font du Python
 \item c'est court à coder et à  tester
 \item les tests en Python sont faciles %???
 \item c'est portable
-\item on peut faire comme du Matlab mais en gratuit ! %à expliquer plus loin
 \item pip (Python Package Index): super pratique pour installer des nouveaux packages!
+\item on peut faire comme du Matlab mais en gratuit ! %à expliquer plus loin
 \end{itemize}
 
 \subsubsection*{Défauts de Python}
@@ -218,46 +218,56 @@ Il faut en effet un commentaire:
  \item pour chaque fonction,
 d\'ecrivant  son but, ses entrées, ses sorties et sur sa place dans l'algorithme globale.
 
- \item pour chaque boucle et pour chaque calcul important. Exemple :\\
+ \item pour chaque boucle et pour chaque calcul important. 
+\end{itemize}
+Exemple :
+\begin{lstlisting}[style=pythonsty]
+int test_tmp_of_doom(int *var, double **plop) 
 
-int test\_tmp\_of\_doom(int *var, double **plop) //ici, sans documentation déjà on est suis perdu \\ 
-/* fonction qui prend en entrée un tableau de référence de pixel et une image de masque de covariance
- et qui renvoie l'indice du pixel contenant la plus haute valeur de truc */\\
-/* Cette fonction est utile dans le calcul des extrema interdépendant des chaînes de kikoolol */\\
+/* fonction qui prend en entrée un tableau de référence de 
+pixel et une image de masque de covariance
+ et qui renvoie l'indice du pixel contenant la plus haute 
+valeur de truc */
 
-int plop=42,temp=-1;\\
-int i=0;\\
+/* Cette fonction est utile dans le calcul des extrema 
+interdépendant des chaînes de kikoolol */
 
-for(i=0;i<plop;i++){\\ 
-/*parcours des index ! */\\
-if (var[i] < plop[var[i]][i])/*cherche plus haute valeur de truc*/\\
-/* il n'y a pas de segmentation fault car les indices sont compris entre 0 et 40 ... bref tout
- commentaire permettant de comprendre ce geste singulier et fort peu ordinaire */\\
-temp = i;\\
-}\\
+int plop=42,temp=-1;
+int i=0;
 
+for(i=0;i<plop;i++){
+/* parcours des index! */
+if (var[i] < plop[var[i]][i]) /*cherche + haute valeur de truc*/
+/* il n'y a pas de segmentation fault car les indices sont compris 
+entre 0 et 40 ... bref tout commentaire permettant de comprendre 
+ce geste singulier et fort peu ordinaire */
+
+temp = i;
+}
+
+\end{lstlisting}
 Bref si vous regardez ce code, les variables sont mal nommées et rien n'a de sens MAIS les
- commentaires explique tout, sans ça, c'est le flou le plus total\\
+ commentaires explique tout, sans ça, c'est le flou le plus total.
+
 Un bon conseil est parfois de se servir des commentaires comme colonne vertébrale de votre 
 code. Vous commencez d'abord par écrire les commentaires décrivant en détail votre algorithme 
-PUIS vous remplissez les trous! Avec ça plus jamais aucun de problème ! \\
-\end{itemize}
+PUIS vous remplissez les trous! Avec ça plus jamais aucun de problème!
 
 \subsubsection*{Nomenclature}
 
 Beaucoup de personnes vous donnerons de bons conseils et ne les suivront pas et soyons honnêtes, 
 tout le monde a des variables qui s'appelle toto ou tmp, et c'est pas grave, si il s'agit de 
-variable TRÈS local pas de problèmes. 
+variable TRÈS locales pas de problème. 
 Voici juste quelques petits conseils pour mieux choisir 
-les noms:\\
+les noms:
 
 \begin{itemize}
 \item Garder la même nomenclature dans TOUT votre code (un tableau d'index qui s'appelle "index[]" 
-ne doit pas s'appeler autrement ailleurs "Index[]" "var[]", c'est la confusion assurée)
+ne doit pas s'appeler autrement ailleurs "Index[]" "var[]", et c'est la confusion assurée)
 \item Choisissez comme nom de variables celles que vous utiliserez dans votre article 
 (si un truc est appelé béta dans un article sur lequel vous vous fondez appelez votre put*** 
 de variable "beta" et c'est tout!)
-\item Éviter de mettre un coup des majuscules pour les fonctions puis en majuscules etc ... 
+\item Éviter de mettre un coup des majuscules pour les fonctions puis en minuscules, etc.
 Mettez tout en minuscule si vous n'êtes pas assez rigoureux pour garder le même typage tout 
 au long de vos codes (majuscules pour fonctions, minuscules pour les variables).
 \end{itemize}
@@ -265,11 +275,12 @@ au long de vos codes (majuscules pour fonctions, minuscules pour les variables).
 \subsection{Bonnes pratiques générales dans le code}
 
 \begin{itemize}
-\item Testez chaque entrée fourni par l'utilisateur, n'oubliez jamais que c'est un débile congénital
- qui n'est là que pour foutre en l'air votre code et expérimenter les bugs laissés négligemment par 
-vous en pensant qu'aucun crétin ne ferait ça ! De plus cet utilisateur c'est peut-être vous dans 
-le futur ! Donc on test et on revoie des erreurs compréhensible par tout le monde de pourquoi ça 
-marche pas : "on a dit une image png en entrée pas autre chose!"
+\item Testez chaque entrée fourni par l'utilisateur, n'oubliez jamais qu'il 
+n'est là pour expérimenter les bugs laissés négligemment par 
+vous! De plus cet utilisateur c'est peut-être vous dans 
+le futur ! Donc il est bon de tester et de renvoyer des erreurs 
+compréhensibles par tout le monde concernant les erreurs. Par exemple: 
+"on a dit une image png en entrée et pas autre chose!"
 \item faites un --help ou un usage dans le cas où les personnes ne rentre QUE le nom du programme : m\^eme
 si cela n'arrive que quand la personne n'a pas lu le README amoureusement écrit par vos soin! Un bon
  --help peut être un beau RTFM!
@@ -280,10 +291,10 @@ si cela n'arrive que quand la personne n'a pas lu le README amoureusement écrit
 
 \subsubsection*{Debugger un code}
 
-Déboguer va vous prendre beaucoup de temps, incluez le dans vos prévisions, si un code doit marcher 
-dans 2 semaines, comptez 3 semaines avec une bonne semaine de debuggage et de tests. Votre ami pour
- le débuggage est simplement la fonction d'écriture sur la sortie standard (printf !). Cela vous 
-permet de savoir d'où  viens le bug et souvent de mettre en avant les différents états des variables.\\
+Débugger va vous prendre beaucoup de temps, incluez le dans vos prévisions, si un code doit marcher 
+dans deux semaines, comptez trois semaines avec une bonne semaine de debuggage et de tests. Votre ami pour
+le débuggage est simplement la fonction d'écriture sur la sortie standard (printf !). Cela vous 
+permet de savoir d'où  viens le bug et souvent de mettre en avant les différents états des variables.
 
 
 \subsubsection*{C/C++}
