@@ -37,25 +37,27 @@ commande :\medskip
 \end{lstlisting}
 
 Les options d'une fonction Latex sont toujours entre crochets. Ici elles déterminent le format 
-(A4) du document, et définissent la taille de la police (12pt).\medskip
+(A4) du document, et définissent la taille par d\'efaut de la police (12pt).
+
 \section{Les Packages}
 
-En dessous du choix de la classe on donne la définition des packages que l'on veut utiliser. 
+En dessous du choix de la classe on donne la définition des packages dont on a besoin. 
 Les packages sont des bibliothèques utilisées pour des fonctions avancées, que l'on doit charger.
  Par exemple la commande  \lstinline+\usepackage{amsmath}+ charge le package ``\textbf{asmath}'',
  qui est utile  pour écrire des symboles mathématiques. Le package ``\textbf{babel}''  est lui 
 utilisé pour écrire des accents (du moins avec l'option ``\textbf{french}''). En effet, les anglophones
- n'en ont pas besoin, donc initialement Latex ne gère pas les accents. L'intérêt du package est
- donc de pallier ce manque. \medskip
+ n'en ont pas besoin, donc initialement Latex ne gère pas les accents. 
+% L'intérêt du package est
+%  donc de pallier ce manque. \medskip
 
 Les packages sont des fichiers au format .sty. Ils sont pour la plupart déjà installés sur votre 
 ordinateur (par Miktex ou Texshop). Par contre, il se peut que certains packages ne soient pas 
 disponibles.  Pour les rendre utilisables pour la compilation il suffit de télécharger le fichier 
-``\textbf{***.sty}''  sur internet (on les trouvera sur le site du  \href{http://www.ctan.org/}{CTAN})
-  et de le placer dans le dossier où vous éditez votre fichier .tex.     \medskip
+``\textbf{*.sty}''  sur internet (\eg sur le site du  \href{http://www.ctan.org/}{CTAN})
+  et de le placer dans le dossier où vous éditez votre fichier .tex.
 
 \section{Formules mathématiques et théorèmes}
-On peut définir des environnements comme des théorèmes, des propositions, etc. par les commandes :\medskip
+On peut définir des environnements comme des théorèmes, des propositions, etc., avec:\medskip
 \begin{lstlisting}
 \newtheorem{theorem}{Theorem}[section] 
 \newtheorem{prop}[theorem]{Proposition}
@@ -75,13 +77,9 @@ Les théorèmes  sont ainsi numérotés par Latex de manière automatique.
  ici on ferait la démonstration ... mais  je vous la laisse en exercice.
 \end{proof}
 
-
-
 Une fois les packages définis, on peut créer des raccourcis pour les quantités qui reviennent 
-souvent ou des fonctions. Ici on définit un raccourcis pour la commande qui permet de créer une
- fonction :\medskip
-
-\lstinline+\newcommand{\nc}{\newcommand}+
+souvent ou des fonctions. Par exemple, on peut définir un raccourcis pour la commande qui créée une 
+fonction: \lstinline+\newcommand{\nc}{\newcommand}+.
 
 \begin{rem}
  Toutes les fonctions (au sens informatique du terme) connues par Latex commencent par $\backslash$ 
@@ -94,14 +92,13 @@ Pour les formules mathématiques, on doit les placer entre deux signes
 $\$$ pour qu'elles soit interprétées comme des commandes spéciales et non comme du texte. 
 Ainsi, pour écrire le signe de sommation ci-dessus on écrit \lstinline+$\sum\_{i=1}^{4}$+ dans le 
 fichier .tex. Si l'on veut afficher des calculs sur une ligne à part on peut par exemple écrire 
-
-\[\mathcal{S}f = \sum_{k\in\mathbb{Z}} \hat{f}[k] e^{i2\pi kt/T} \] 
-
+\[\mathcal{S}f = \sum_{k\in\mathbb{Z}} \hat{f}[k] e^{i2\pi kt/T}, \] 
 en mettant cette fois les formules  entre  les commandes 
-\lstinline+\[+ et \lstinline+\]+. On peut aussi utiliser un environnement qui commence par la 
+\lstinline+\[+ et \lstinline+\]+. Il est en fait recommandé d'utiliser un environnement qui commence par la 
 commande 
-\lstinline+\begin{blabla}+ et finit par la commande \lstinline+\end{blabla}+. Si \lstinline+blabla=align+, 
-on peut aligner des calculs facilement:
+\lstinline+\begin{blabla}+ et finit par la commande \lstinline+\end{blabla}+ pour ce genre de ligne de calcul.
+Pensez plut\^ot \`a utiliser \lstinline+\begin{equation}+, voir \lstinline+\begin{align}+ 
+si l'on veut des calculs facilement:
 \begin{align}
  \mathcal{S}f & = \sum_{k\in\mathbb{Z}} \hat f[k] e^{i2\pi kt/T} \label{nomformule}\\
   & = \sum_{k\in\mathbb{Z}} \hat f[k] e^{i2\pi kt/T}
@@ -109,10 +106,10 @@ on peut aligner des calculs facilement:
 
 \begin{rem}
 On notera que la numérotation s'est déclenchée toute seule pour les formules. 
-On peut  leur donner des noms avec la commande label,  dont la syntaxe est  \lstinline+\label{nomformule}+.  
-On s'y réfère plus tard dans le document  avec la commande \lstinline+\ref{nomformule}+. 
+On peut  leur donner des noms avec la commande \lstinline+label+,  dont la syntaxe est  \lstinline+\label{nomformule}+.  
+On s'y réfère plus tard dans le document avec \lstinline+\ref{nomformule}+ (ou \lstinline+\eqref{nomformule}+), ce qui affiche
+le num\'ero \ref{nomformule} (respectivement \eqref{nomformule}). 
 Ainsi l'ordre des équations peut être changé sans avoir besoin de re-numéroter tout un document. 
-Notre première équation est donc \ref{nomformule}. 
 Si l'on ne veut pas numéroter une équation,  on met une étoile à la fin de l'environnement 
 (écrire \lstinline+align*+ à la place d'\lstinline+align+ par exemple).
 \end{rem}
@@ -122,8 +119,8 @@ Si l'on ne veut pas numéroter une équation,  on met une étoile à la fin de l
 Pour un grand panel de symboles mathématiques, il suffit de regarder les raccourcis fournis par l'éditeur 
 que vous utilisez ou de chercher sur Internet un lexique. Voici néanmoins quelques commandes : 
 pour aller à la ligne  \lstinline+\\+, 
-pour une nouvelle feuille \lstinline+\newpage+, pour les trois points  \lstinline+\ldots+\medskip
-\\
+pour une nouvelle feuille \lstinline+\newpage+, pour les trois points  \lstinline+\ldots+.
+
 On renvoit à \href{http://www.tex.ac.uk/tex-archive/info/symbols/comprehensive/symbols-a4.pdf}
 {``The Comprehensive Latex Symbol List''} par Scott Pakin pour une liste exhaustive de tous les
  symboles connus.
@@ -146,22 +143,22 @@ On commence par donner un titre au  fichier, le nom de l'auteur et éventuelleme
 
 
 Ensuite on commence le corps du document avec \lstinline+\begin{document}+ 
-(ne pas oublier de fermer tout en bas du document par la commande \lstinline+\end{document}+). 
+(ne pas oublier de fermer tout en bas par \lstinline+\end{document}+). 
 On insère le titre avec \lstinline+\maketitle+ et la table des matières avec \lstinline+\tableofcontents+.
 La construction de la table des matières se fait automatiquement. 
 Elle donne l'arborescence du document, dans l'ordre où les chapitres et sous chapitres sont donnés 
 dans le fichier .tex.\medskip	
 
 
-On crée  des chapitres (resp. des sous chapitres) en écrivant simplement au début d'un chapitre 
-\lstinline+\chapter{Le nom du chapitre}+ 
-(resp. \lstinline+\section{Le nom du sous chapitre}+).  
+On crée  des chapitres (resp. des sous chapitres) en écrivant au début d'un chapitre 
+\lstinline+\chapter{le_nom_du_chapitre}+ 
+(resp. \lstinline+\section{le_nom_du_sous-chapitre}+).  
 Latex numérote tout seul les chapitres dans l'ordre où ils se présentent. 
 Si l'on intervertit deux chapitres, à la prochaine compilation les numéros seront automatiquement 
 échangés. Attention, il faut parfois deux compilations pour afficher correctement la table des matières.  \medskip
  
-Ceci fait vous pouvez déjà commencer à rédiger un premier document, visuellement correcte avec
- toutes les formules de mathématiques dont vous avez besoin. Au chapitre suivant on va voir 
+Ceci fait, vous pouvez déjà commencer à rédiger un premier document, visuellement correcte avec
+toutes les formules de mathématiques dont vous avez besoin. Au chapitre suivant on va voir 
 quelques raffinements possibles pour égayer vos documents.
 
 
@@ -170,10 +167,9 @@ quelques raffinements possibles pour égayer vos documents.
 \section{Insérer une image }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Après avoir créé des graphiques avec Scilab, Matlab ou tout autre logiciel,  vous pouvez avoir 
+Après avoir créé des graphiques avec \lstinline+R+, Python, ou Matlab, etc.,  vous pouvez avoir 
 envie de les insérer dans votre rapport. Cette opération est plus compliquée qu'avec un éditeur 
 de texte classique. Voici le code pour insérer l'image ci-dessous : \medskip
-
 \begin{lstlisting}
 \begin{figure}[htb]
 \begin{minipage}[b]{0.33\linewidth}
@@ -204,8 +200,7 @@ width=1.\textwidth]{example_simple_png}}
 \end{figure}
 \end{lstlisting} 
 
-\medskip
-\begin{figure}[htb]
+\begin{figure}[h]
 \begin{minipage}[b]{0.33\linewidth}
   \centering
  \centerline{\includegraphics[width=1.\textwidth]{example_simple_png}}
@@ -229,6 +224,30 @@ width=1.\textwidth]{example_simple_png}}
 \caption{De loin les trois formats se ressemblent...mais quand m\^eme le .jpg c'est bien nul}
 \label{fig:ma_figure}
 \end{figure}
+L'image insérée doit se trouver par défaut dans le même répertoire où se trouve le fichier .tex 
+que vous écrivez. On peut d\'eclarer \`a la main les sous dossiers, ou bien cr\'eer une fois
+pour toute un dossier \lstinline+images+ et d\'eclarer son chemin d'acc\`es dans le préambule
+avec
+\begin{lstlisting}
+\graphicspath{{images/}} 
+\end{lstlisting}
+
+% On pourra faire varier les paramètres de taille pour voir comment jouer sur la 
+% taille de l'image que l'on insère. 
+Il existe d'autres façons d'insérer des images, mais celle-ci à l'avantage de fonctionner~\ldots
+
+
+En utilisant ''\textbf{pdfLatex}'' (largement conseillé)  on peut insérer des images au format .jpg, .png, 
+.pdf, etc. En revanche, si l'on compile pour obtenir un fichier .ps avec ``\textbf{Latex}'' il 
+faut insérer des images sous le format .eps. Les commandes en revanche ne diffèrent
+ pas.
+
+Grâce au label utilisé pour la figure, on peut se référer à celle-ci comme pour les équations,
+ par la commande \lstinline+\ref{fig:ma_figure}+. Ainsi la première figure est la figure \ref{fig:ma_figure}.
+
+Pour des documents visuellement agr\'eable utilisez les extensions .pdf et .eps, et surtout proscrire le .jpg!
+notamment pour des graphiques ou des croquis. Pour les images photos, on pourra utiliser le .png qui lui aussi
+\'evite les artefacts de compression du format .jpg .
 
 \begin{figure}[htb]
 \begin{minipage}[b]{0.33\linewidth}
@@ -240,7 +259,7 @@ width=1.\textwidth]{example_simple_png}}
 \hfill
 \begin{minipage}[b]{.33\linewidth}
   \centering
- \centerline{\includegraphics[clip=true,viewport=550 410 729 590,width=1.\textwidth]{example_simple_jpg}}
+ \centerline{\includegraphics[clip=true,viewport=550 410 727 590,width=1.\textwidth]{example_simple_jpg}}
   \vspace{0.1cm}
   \centerline{(B) version .jpg}\medskip
 \end{minipage}%
@@ -251,33 +270,11 @@ width=1.\textwidth]{example_simple_png}}
   \vspace{0.1cm}
   \centerline{(C) version .pdf}\medskip
 \end{minipage}%
-\caption{De pr\`es le .jpg c'est \textbf{VRAIMENT} nul}
+\caption{De pr\`es le .jpg c'est \textbf{VRAIMENT} nul. Vous pouvez zoomer sur la figure (C) voir l'intérêt d'un
+format vectoriel}
 \label{fig:ma_figure_zoom}
 \end{figure}
 
-
-L'image insérée doit se trouver par défaut dans le même répertoire où se trouve le fichier .tex 
-que vous écrivez. On peut d\'eclarer \`a la main les sous dossiers, ou bien cr\'eer une fois
-pour toute un dossier \lstinline+images+ et d\'eclarer son chemin d'acc\`es dans le préambule
-avec
-\begin{lstlisting}
-\graphicspath{{images/}} 
-\end{lstlisting}
-
-
-
-On pourra faire varier les paramètres de taille pour voir comment jouer sur la 
-taille de l'image que l'on insère. Il existe d'autres façons d'insérer des images, mais celle-ci
- à l'avantage de bien fonctionner \ldots \medskip
-
-
-En ''pdfLatex'' (version largement conseillée)  on peut insérer des images au format .jpg, .png, 
-.pdf, etc. En revanche, si l'on compile pour obtenir un fichier .ps avec ``\textbf{Latex}'' il 
-faut insérer des fichiers sous le format .eps. Les commandes en revanche ne diffèrent
- pas.\medskip
-
-Grâce au label utilisé pour la figure, on peut se référer à celle-ci comme pour les équations,
- par la commande \lstinline+\ref{fig:ma_figure}+. Ainsi la première figure est la figure \ref{fig:ma_figure}.
 
 \section{Liens hypertextes}
 
