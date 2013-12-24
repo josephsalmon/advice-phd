@@ -7,8 +7,8 @@ optimum. Il existe en gros quatre grandes familles de code :
 
 \begin{enumerate}
 \item procédural (C, Fortran, Pascal, Basic, \ldots)
-\item orienté objet (Java, C\#, Python, ...)
-\item fonctionnel (OCaml, Lisp, ...)
+\item orienté objet (Java, C\#, Python, \ldots)
+\item fonctionnel (OCaml, Lisp, \ldots)
 \item logique (Prolog)
 \end{enumerate}
 
@@ -17,8 +17,8 @@ qui appartient dans sa structure même aux deux premières familles.
 
 \section{Programmation Procédurale}
 
-Les langages procéduraux sont une suite de routines qui s'exécutent dans l'ordre ! Bref, ce sont des ordres 
-donnés à la machine qui s'exécutent pas à pas. C'est une recette de cuisine.\\
+Les langages procéduraux sont une suite de routines qui s'exécutent dans l'ordre. Ce sont des ordres 
+donnés à la machine qui s'exécutent pas à pas (comme une recette de cuisine).\\
 
 Nous ne parlerons dans ce document que du C. 
 
@@ -29,17 +29,17 @@ une chose : sa rapidité ! Pour un chercheur qui n'est pas versé dans l'art de 
 il vaut mieux apprendre un langage plus moderne.
 
 \subsubsection*{Avantages du C}
- Si vous avez une question sur un point subtil du langage C, la réponse est certainement dans cette 
+ Pour une question subtile sur le langage C, la réponse est certainement dans cette 
  \href{http://c-faq.com/}{FAQ}.
  
  
  
 \begin{itemize}
-\item une fois compilé, le C est très rapide, et est très proche des instructions machines
-\item si  vous devez faire du temps réel \textbf{FAITES} du C
-\item est facilement parallélisable puisque vous contrôlez la mémoire
-par exemple en utilisant \href{http://openmp.org/}{OPENMP} (qui marche aussi sous C++)
-\item Le C et est un langage répandu et beaucoup de gens le comprennent.	
+\item une fois compilé, le C est très rapide, et est très proche des instructions machines,
+donc si  vous devez faire du temps réel \textbf{FAITES} du C
+\item le C est facilement parallélisable puisque vous contrôlez la mémoire
+par exemple en utilisant \href{http://openmp.org/}{OPENMP} (possible aussi en C++)
+\item le C et est un langage répandu et beaucoup de gens le comprennent
 \end{itemize}
 
 \subsubsection*{Défauts du C}
@@ -56,11 +56,10 @@ par exemple en utilisant \href{http://openmp.org/}{OPENMP} (qui marche aussi sou
 
 \section{Programmation orientée objet}
 
-La programmation orienté objet est difficile à définir et vous trouverez sur le net de nombreuses 
-définitions toutes plus précises et plus incompréhensibles les unes que les autres.
- En bref, c'est la même chose que précédemment mais en mieux. C'est une recette de cuisine qui se 
-découpe en de nombreuses recette de cuisine ultra spécialisées (comment cuire la viandes,
- comment assaisonner les légumes, comment faire la sauces).\\
+La programmation orientée objet est difficile à définir et vous trouverez sur le net de nombreuses 
+définitions possibles. En bref, c'est la même chose que précédemment mais en mieux. C'est une recette de cuisine qui se 
+découpe en de nombreuses sous-recette de cuisine ultra spécialisées (comment cuire la viande,
+assaisonner les légumes, faire les sauces, etc.).\\
 
 % Conseil : n'écoutez JAMAIS les vieux briscards du code qui vous parle de VRAI programmation objet 
 % ou de full OOP (oriented object programming), c'est des chieurs qu'il faut ignorer. 
@@ -90,20 +89,22 @@ nouveauté : les types templétés extrêmement utiles quand on sait les utilise
 \item c'est compliqué à mettre en oeuvre
 %\item faut compiler
 %\item c'est presque aussi long pour coder
-\item c'est toujours pas portable %qu'est ce que tu entends par c'est pas portable ? 
+\item ce n'est pas portable %qu'est ce que tu entends par c'est pas portable ? 
 \end{itemize}
 
 \subsection{Python}
 
 Python est un langage moderne, agréable d'utilisation et concis.
 Il est parfaitement adapté à l'écriture de programmes dont les performances ne sont
-pas importantes. Ce langage est enseigné au lycée et en classes préparatoires et tends à devenir une référence
-dans les universités. Il est donc utile de le connaître si vous avez à enseigner.
+pas importantes. Python tend à devenir un standard: ce langage est enseigné au lycée 
+et en classes préparatoires (ainsi que dans les universités et les grandes \'ecoles). 
 
-Pour apprendre le python, vous pouvez utiliser le site 
+Il est donc utile de le connaître si vous avez à enseigner.
+
+Pour apprendre Python, vous pouvez utiliser le site 
 \href{http://www.codecademy.com/tracks/python}{codecademy} 
 qui donne des exercices en ligne pour apprendre par l'exemple.
-Le livre de Kevin Sheppard peut aussi s'avérer utile: 
+Le livre de Kevin Sheppard peut aussi s'avérer un compl\'ement utile: 
 \href{http://www.kevinsheppard.com/images/0/09/Python_introduction.pdf}{Python Introduction}
 
 \subsubsection*{Avantages de Python}
@@ -123,24 +124,22 @@ Le livre de Kevin Sheppard peut aussi s'avérer utile:
 \begin{itemize}
 \item il n'y a pas les templates
 \item n'importe qui peut faire n'importe quoi ! %ça n'est pas typé
-\item c'est LENT, c'est vraiment LENT
+\item c'est lent
 \end{itemize}
 
-\section{Dérivé et autres langages liés à des programmes}
+\section{Dérivés et autres langages liés à des programmes}
 
 Il existe des logiciels qui ont tellement apportés dans un domaine de recherche qu'ils sont 
 indispensables dans votre travail. Notamment, si vous faites des statistiques, vous ne pourrez
- faire l'impasse d'une bonne formation en R. Plus généralement, Matlab a réussit à s'imposer 
-comme un standard dans la programmation scientifique.\\
+ faire l'impasse d'une bonne formation en \lstinline+R+. De m\^eme en traitement du signal, 
+Matlab a réussit à s'imposer comme un standard.\\
 
 Ce sont de bons logiciels qu'il est intéressant d'utiliser, notamment dans le cas de Matlab, 
-vous aurez la possibilité d'utiliser tout la base \href{http://www.mathworks.fr/matlabcentral/fileexchange}{mathworks}.
+vous aurez la possibilité d'utiliser tout la base \href{http://www.mathworks.fr/matlabcentral/fileexchange}{Mathworks}.
 Toutefois, il est intéressant de noter que la syntaxe de Python se reprochant de celle de Matlab, il a 
 été développé en Python des bibliothèques et outils permettant de programmer en Python comme en Matlab: 
 \href{http://www.numpy.org/}{numpy}, \href{http://www.scipy.org/}{scipy} et \href{http://matplotlib.org/}{matplotlib}.\\
 
-Python tend à devenir un standard (par exemple les classes préparatoires viennent de créer 
-des enseignements d'informatique sous ce langage).
 
 
 \section{Trucs et astuces pour choisir le langage adéquate}
@@ -149,11 +148,11 @@ En fonctions de différentes problématiques il est de bon ton de savoir ce que 
 
 \begin{itemize}
 \item Temps réel : C et c'est TOUT !!!!
-\item Traitement d'image ou du son: Si vous traitez de grosses données C++ sinon Python ou Matlab
-\item Vision 3D : C++ avec opencv (même si cette bibliothèque de fonctions montrent des signe 
-évident d'incompétence, elle tends à devenir classique) et Python si vous avez de toutes petites données
+\item Traitement d'image ou du son: C++ pour de grosses données, sinon Python ou Matlab
+\item Vision 3D : C++ avec opencv (bien qu'imparfaite cette librairie tend à devenir classique) 
+et Python si vous avez de toutes petites données
 \item Computer graphic : C++ 
-\item stat et machine learning : R, Python et Matlab
+\item Statistiques et machine learning : R, Python et Matlab
 \end{itemize}  
 
 \section{Bonnes pratiques en programmation scientifiques}
@@ -224,13 +223,13 @@ Exemple :
 \begin{lstlisting}[style=pythonsty]
 int test_tmp_of_doom(int *var, double **plop) 
 
-/* fonction qui prend en entrée un tableau de référence de 
+/* fonction qui prend en entree un tableau de reference de 
 pixel et une image de masque de covariance
  et qui renvoie l'indice du pixel contenant la plus haute 
 valeur de truc */
 
 /* Cette fonction est utile dans le calcul des extrema 
-interdépendant des chaînes de kikoolol */
+interdependant des chaines de kikoolol */
 
 int plop=42,temp=-1;
 int i=0;

@@ -90,9 +90,9 @@ souvent ou des fonctions. Ici on définit un raccourcis pour la commande qui per
 \end{rem}
 
 
-Pour les formules Mathématiques, on doit  les mettre entre deux signes 
+Pour les formules mathématiques, on doit les placer entre deux signes 
 $\$$ pour qu'elles soit interprétées comme des commandes spéciales et non comme du texte. 
-Pour écrire le signe de sommation ci-dessus on écrit donc \lstinline+$\sum\_{i=1}^{4}$+ dans le 
+Ainsi, pour écrire le signe de sommation ci-dessus on écrit \lstinline+$\sum\_{i=1}^{4}$+ dans le 
 fichier .tex. Si l'on veut afficher des calculs sur une ligne à part on peut par exemple écrire 
 
 \[\mathcal{S}f = \sum_{k\in\mathbb{Z}} \hat{f}[k] e^{i2\pi kt/T} \] 
@@ -153,12 +153,12 @@ Elle donne l'arborescence du document, dans l'ordre où les chapitres et sous ch
 dans le fichier .tex.\medskip	
 
 
-On crée  des chapitres, sous chapitres en écrivant simplement  au début d'un chapitre 
+On crée  des chapitres (resp. des sous chapitres) en écrivant simplement au début d'un chapitre 
 \lstinline+\chapter{Le nom du chapitre}+ 
-et pour les sous-chapitres \lstinline+\section{Le nom du sous chapitre}+.  
+(resp. \lstinline+\section{Le nom du sous chapitre}+).  
 Latex numérote tout seul les chapitres dans l'ordre où ils se présentent. 
 Si l'on intervertit deux chapitres, à la prochaine compilation les numéros seront automatiquement 
-échangés. Il faut parfois deux compilations pour afficher correctement la table des matières.  \medskip
+échangés. Attention, il faut parfois deux compilations pour afficher correctement la table des matières.  \medskip
  
 Ceci fait vous pouvez déjà commencer à rédiger un premier document, visuellement correcte avec
  toutes les formules de mathématiques dont vous avez besoin. Au chapitre suivant on va voir 
@@ -176,44 +176,85 @@ de texte classique. Voici le code pour insérer l'image ci-dessous : \medskip
 
 \begin{lstlisting}
 \begin{figure}[htb]
-\begin{minipage}[b]{0.48\linewidth}
-\centering
-\centerline{\includegraphics[width=1.44\textwidth]{psnr_sig60.jpg}}
-\vspace{0.1cm}
-\centerline{(A) un premier graphique}
-\medskip
+\begin{minipage}[b]{0.33\linewidth}
+  \centering
+ \centerline{\includegraphics[clip,viewport=400 300 520 450,
+width=1.\textwidth]{example_simple_png}}
+  \vspace{0.1cm}
+  \centerline{(A) version .png}\medskip
 \end{minipage}
 \hfill
-\begin{minipage}[b]{.48\linewidth}
-\centering
-\centerline{\includegraphics[width=1.44\textwidth]{psnr_sig60.jpg}}
-\vspace{0.1cm}
-\centerline{(B) un autre}
-\end{minipage} 
-\caption{Des graphiques encore des graphiques...}
-\label{fig:ma_figure}
+\begin{minipage}[b]{.33\linewidth}
+  \centering
+ \centerline{\includegraphics[clip=true,
+ viewport=550 410 729 590,width=1.\textwidth]{example_simple_jpg}}
+  \vspace{0.1cm}
+  \centerline{(B) version .jpg}\medskip
+\end{minipage}%
+\hfill
+\begin{minipage}[b]{.33\linewidth}
+  \centering
+ \centerline{\includegraphics[clip,viewport=400 300 520 450,
+ width=1.\textwidth]{example_simple_pdf}}
+  \vspace{0.1cm}
+  \centerline{(C) version .pdf}\medskip
+\end{minipage}%
+\caption{De pr\`es le .jpg c'est \textbf{VRAIMENT} nul}
+\label{fig:ma_figure_zoom}
 \end{figure}
 \end{lstlisting} 
 
 \medskip
 \begin{figure}[htb]
-\begin{minipage}[b]{0.48\linewidth}
+\begin{minipage}[b]{0.33\linewidth}
   \centering
- \centerline{\includegraphics[width=1.44\textwidth]{srcimages/psnr_sig40}}
+ \centerline{\includegraphics[width=1.\textwidth]{example_simple_png}}
   \vspace{0.1cm}
-  \centerline{(A) un premier graphique }\medskip
+  \centerline{(A) Version .png}\medskip
 \end{minipage}
 \hfill
-\begin{minipage}[b]{.48\linewidth}
+\begin{minipage}[b]{.33\linewidth}
   \centering
- \centerline{\includegraphics[width=1.44\textwidth]{srcimages/psnr_sig60}}
+ \centerline{\includegraphics[width=1.\textwidth]{example_simple_jpg}}
   \vspace{0.1cm}
-  \centerline{(B) un deuxième graphique}\medskip
+  \centerline{(B) Version .jpg}\medskip
 \end{minipage}%
-
-\caption{Des graphiques encore des graphiques...mais quand m\^eme le .jpg c'est bien nul	}
+\hfill
+\begin{minipage}[b]{.33\linewidth}
+  \centering
+ \centerline{\includegraphics[width=1.\textwidth]{example_simple_pdf}}
+  \vspace{0.1cm}
+  \centerline{(C) version .pdf}\medskip
+\end{minipage}%
+\caption{De loin les trois formats se ressemblent...mais quand m\^eme le .jpg c'est bien nul}
 \label{fig:ma_figure}
 \end{figure}
+
+\begin{figure}[htb]
+\begin{minipage}[b]{0.33\linewidth}
+  \centering
+ \centerline{\includegraphics[clip,viewport=400 300 520 450,width=1.\textwidth]{example_simple_png}}
+  \vspace{0.1cm}
+  \centerline{(A) version .png}\medskip
+\end{minipage}
+\hfill
+\begin{minipage}[b]{.33\linewidth}
+  \centering
+ \centerline{\includegraphics[clip=true,viewport=550 410 729 590,width=1.\textwidth]{example_simple_jpg}}
+  \vspace{0.1cm}
+  \centerline{(B) version .jpg}\medskip
+\end{minipage}%
+\hfill
+\begin{minipage}[b]{.33\linewidth}
+  \centering
+ \centerline{\includegraphics[clip,viewport=400 300 520 450,width=1.\textwidth]{example_simple_pdf}}
+  \vspace{0.1cm}
+  \centerline{(C) version .pdf}\medskip
+\end{minipage}%
+\caption{De pr\`es le .jpg c'est \textbf{VRAIMENT} nul}
+\label{fig:ma_figure_zoom}
+\end{figure}
+
 
 L'image insérée doit se trouver par défaut dans le même répertoire où se trouve le fichier .tex 
 que vous écrivez. On peut d\'eclarer \`a la main les sous dossiers, ou bien cr\'eer une fois
@@ -231,12 +272,12 @@ taille de l'image que l'on insère. Il existe d'autres façons d'insérer des im
 
 
 En ''pdfLatex'' (version largement conseillée)  on peut insérer des images au format .jpg, .png, 
-.pdf \ldots En revanche, si l'on compile pour obtenir un fichier .ps avec ``\textbf{Latex}'' il 
-faut insérer des fichiers sous le format (peu connu) .eps. Les commandes en revanche ne diffèrent
+.pdf, etc. En revanche, si l'on compile pour obtenir un fichier .ps avec ``\textbf{Latex}'' il 
+faut insérer des fichiers sous le format .eps. Les commandes en revanche ne diffèrent
  pas.\medskip
 
-Grâce au label utilisé pour la figure, on peut se référer  à celle-ci comme pour les équations,
- par la commande \lstinline+\ref{fig:ma_figure}+. Ansi la première figure est la figure \ref{fig:ma_figure}.
+Grâce au label utilisé pour la figure, on peut se référer à celle-ci comme pour les équations,
+ par la commande \lstinline+\ref{fig:ma_figure}+. Ainsi la première figure est la figure \ref{fig:ma_figure}.
 
 \section{Liens hypertextes}
 
